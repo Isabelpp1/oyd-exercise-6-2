@@ -1,23 +1,23 @@
-# oyd-exercise-6-2 — ALB with Listener and Target Group
+# oyd-exercise-6-2 — ALB con Listener y Target Group
 
-This repository provisions an Application Load Balancer (ALB) in front of the existing MediaStream API EC2 instance using Terraform.
+Este repositorio aprovisiona un Application Load Balancer (ALB) frente a la instancia EC2 existente de la API de MediaStream usando Terraform.
 
-## Architecture
+## Arquitectura
 
-- **VPC & EC2** — provisioned by the `setup/` workspace (run once before the root workspace).
-- **ALB Security Group** — allows inbound HTTP on port 80 from the internet.
-- **Target Group** — registers the existing EC2 instance with a health check on `/`.
-- **ALB** — internet-facing application load balancer spanning the two public subnets.
-- **Listener** — forwards HTTP traffic on port 80 to the target group.
+- **VPC y EC2** — aprovisionados por el workspace `setup/` (ejecutar una sola vez antes del workspace raíz).
+- **Security Group del ALB** — permite tráfico HTTP entrante en el puerto 80 desde internet.
+- **Target Group** — registra la instancia EC2 existente con un health check en `/`.
+- **ALB** — balanceador de carga de aplicación orientado a internet, distribuido en las dos subnets públicas.
+- **Listener** — reenvía el tráfico HTTP en el puerto 80 al target group.
 
-## Prerequisites
+## Prerrequisitos
 
-- AWS CLI configured with credentials.
+- AWS CLI configurado con credenciales válidas.
 - Terraform >= 1.8.
 
-## Usage
+## Uso
 
-### 1. Provision the base infrastructure
+### 1. Aprovisionar la infraestructura base
 
 ```bash
 cd setup/
@@ -26,14 +26,14 @@ terraform apply -auto-approve
 cd ..
 ```
 
-### 2. Provision the ALB layer
+### 2. Aprovisionar la capa del ALB
 
 ```bash
 terraform init
 terraform apply -var-file=terraform.tfvars
 ```
 
-## Evidence
+## Evidencia
 
 ### terraform state list
 

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/isabelpaiz/Library/Mobile Documents/com~apple~CloudDocs/UNIVERSIDAD/PDDS/optimizaciones/oyd-exercise-6-2/setup\")",
+      "Bash(mkdir -p \"/Users/isabelpaiz/Library/Mobile Documents/com~apple~CloudDocs/UNIVERSIDAD/PDDS/optimizaciones/oyd-exercise-6-2/evidence\")"
+    ]
+  }
+}
